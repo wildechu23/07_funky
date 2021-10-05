@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 void printArray(int *arr, int size);
-int avgArray(int *arr, int size);
+double avgArray(int *arr, int size);
 void copyArray(int *arr1, int *arr2, int size);
 
 int main() {
@@ -25,12 +25,12 @@ void printArray(int *arr, int size) {
     printf("]\n");
 }
 
-int avgArray(int *arr, int size) {
+double avgArray(int *arr, int size) {
     int i = 0, total = 0;
     for(i; i < size; i++) {
         total += arr[i];
     }
-    return total/size;
+    return (double)total/size;
 }
 
 void copyArray(int *arr1, int *arr2, int size) {
